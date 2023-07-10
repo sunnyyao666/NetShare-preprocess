@@ -1,0 +1,50 @@
+{
+  "input_file": {
+    "path": "./test.csv",
+    "format": "csv"
+  },
+  "output_file": "result.csv",
+  "fields": {
+    "timestamp": [
+      {
+        "name": "ts",
+        "parse": "second2micro",
+        "to": "time",
+        "format": "int"
+      }
+    ],
+    "metadata": [
+      {
+        "name": "id.orig_h",
+        "parse": "ip_quad2int",
+        "to": "srcip",
+        "format": "int"
+      },
+      {
+        "name": "id.orig_p",
+        "to": "srcport",
+        "format": "int"
+      },
+      {
+        "name": "id.resp_h",
+        "parse": "ip_quad2int",
+        "to": "dstip",
+        "format": "int",
+        "abnormal": true
+      },
+      {
+        "name": "id.resp_p",
+        "to": "dstport",
+        "format": "int"
+      }
+    ],
+    "timeseries": [
+      {
+        "name": "func",
+        "parse": "modbus_func2code",
+        "to": "funccode",
+        "format": "int"
+      }
+    ]
+  }
+}
