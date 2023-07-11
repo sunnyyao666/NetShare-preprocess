@@ -79,7 +79,8 @@ def parse_to_csv(config_file):
     result = pd.DataFrame({})
     parse_field(fields, df, result)
 
-    result.to_csv(output_file, index=False)
+    result.to_csv(output_file, index=True)
+    return output_file
 
 
 if __name__ == '__main__':

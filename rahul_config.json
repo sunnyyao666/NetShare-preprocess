@@ -1,0 +1,132 @@
+{
+  "input_file": {
+    "path": "./75_small.csv",
+    "format": "csv"
+  },
+  "output_file": "rahul.csv",
+  "fields": {
+    "timestamp": [
+      {
+        "name": "packet__time",
+        "format": "str"
+      }
+    ],
+    "metadata": [
+      {
+        "name": "IP__len",
+        "format": "int"
+      },
+      {
+        "name": "IP__src_s",
+        "format": "str"
+      },
+      {
+        "name": "IP__dst_s",
+        "format": "str"
+      },
+      {
+        "name": "IP__p",
+        "format": "int"
+      },
+      {
+        "name": "IP__type",
+        "format": "str",
+        "abnormal": true
+      },
+      {
+        "name": "Label",
+        "format": "str"
+      },
+      {
+        "name": "packet__layers",
+        "format": "str"
+      },
+      {
+        "name": "DNS__answers",
+        "format": "str",
+        "abnormal": true
+      },
+      {
+        "name": "UDP__dport",
+        "format": "int",
+        "abnormal": true
+      },
+      {
+        "name": "UDP__sport",
+        "format": "int",
+        "abnormal": true
+      },
+      {
+        "name": "TCP__seq",
+        "format": "int"
+      },
+      {
+        "name": "TCP__flags",
+        "format": "int"
+      },
+      {
+        "name": "TCP__sport",
+        "format": "int"
+      },
+      {
+        "name": "TCP__dport",
+        "format": "int"
+      },
+      {
+        "name": "DNS__query",
+        "format": "int",
+        "abnormal": true
+      },
+      {
+        "name": "DNS__an",
+        "format": "int",
+        "abnormal": true
+      },
+      {
+        "name": "DNS__dlen",
+        "format": "int",
+        "abnormal": true
+      },
+      {
+        "name": "DNS__ttl",
+        "format": "int",
+        "abnormal": true
+      },
+      {
+        "name": "DNS__opcode",
+        "format": "int",
+        "abnormal": true
+      },
+      {
+        "name": "DNS__type",
+        "format": "int",
+        "abnormal": true
+      },
+      {
+        "name": "IEEE__type",
+        "format": "int",
+        "abnormal": true
+      },
+      {
+        "name": "IEEE__dsr",
+        "format": "int",
+        "abnormal": true
+      },
+      {
+        "name": "MQTT__mlen",
+        "format": "int",
+        "abnormal": true
+      }
+    ],
+    "timeseries": [
+      {
+        "name": "IP__ttl",
+        "format": "float"
+      },
+      {
+        "name": "packet__len",
+        "format": "float"
+      }
+    ]
+  }
+}
