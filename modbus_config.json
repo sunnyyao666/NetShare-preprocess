@@ -1,7 +1,7 @@
 {
   "input_file": {
-    "path": "./test.csv",
-    "format": "csv"
+    "path": "zeek/modbus.log",
+    "format": "zeek_json_log"
   },
   "output_file": "result.csv",
   "fields": {
