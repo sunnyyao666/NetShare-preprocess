@@ -8,124 +8,165 @@
     "timestamp": [
       {
         "name": "packet__time",
-        "format": "str"
+        "format": "timestamp",
+        "encoding": "timestamp"
       }
     ],
     "metadata": [
       {
         "name": "IP__len",
-        "format": "int"
+        "format": "integer",
+        "encoding": "bit"
       },
       {
         "name": "IP__src_s",
-        "format": "str"
+        "format": "IP",
+        "encoding": "bit",
+        "type": "IPv4"
       },
       {
         "name": "IP__dst_s",
-        "format": "str"
+        "format": "IP",
+        "encoding": "bit",
+        "type": "IPv4"
       },
       {
         "name": "IP__p",
-        "format": "int"
+        "format": "integer",
+        "encoding": "word_proto"
       },
       {
         "name": "IP__type",
-        "format": "str",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "bit"
       },
       {
         "name": "Label",
-        "format": "str"
+        "format": "string",
+        "encoding": "categorical"
       },
       {
         "name": "packet__layers",
-        "format": "str"
-      },
-      {
-        "name": "DNS__answers",
-        "format": "str",
-        "abnormal": true
+        "format": "list",
+        "encoding": "list_attributes",
+        "names": [
+          "Ethernet",
+          "IP",
+          "TCP"
+        ]
       },
       {
         "name": "UDP__dport",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "word_port"
       },
       {
         "name": "UDP__sport",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "word_port"
       },
       {
         "name": "TCP__seq",
-        "format": "int"
+        "format": "integer",
+        "encoding": "bit"
       },
       {
         "name": "TCP__flags",
-        "format": "int"
+        "format": "integer",
+        "encoding": "bit"
       },
       {
         "name": "TCP__sport",
-        "format": "int"
+        "format": "integer",
+        "encoding": "word_port"
       },
       {
         "name": "TCP__dport",
-        "format": "int"
+        "format": "integer",
+        "encoding": "word_port"
       },
       {
         "name": "DNS__query",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "bit"
       },
       {
         "name": "DNS__an",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "bit"
       },
       {
         "name": "DNS__dlen",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "bit"
       },
       {
         "name": "DNS__ttl",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "bit"
       },
       {
         "name": "DNS__opcode",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "bit"
       },
       {
         "name": "DNS__type",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "bit"
       },
       {
         "name": "IEEE__type",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "bit"
       },
       {
         "name": "IEEE__dsr",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "bit"
       },
       {
         "name": "MQTT__mlen",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "bit"
       }
     ],
     "timeseries": [
       {
         "name": "IP__ttl",
-        "format": "float"
+        "format": "float",
+        "encoding": "float"
       },
       {
         "name": "packet__len",
-        "format": "float"
+        "format": "float",
+        "encoding": "float"
+      },
+      {
+        "name": "DNS__answers",
+        "format": "list",
+        "abnormal": true,
+        "encoding": "list_values",
+        "names": {
+          "name": "string",
+          "type": "bit",
+          "cls": "bit",
+          "ttl": "bit",
+          "dlen": "bit",
+          "address": "string"
+        }
       }
     ]
   }

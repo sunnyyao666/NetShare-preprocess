@@ -77,7 +77,7 @@ def handle_abnormal(value, field):
     Definition of abnormal:
         * Value of numbers less than 0;
         * Empty field.
-    If detected abnormal, will return `unavailable` or `0` according to the desired output format
+    If detected abnormal, will return `Unavailable` or `0` according to the desired output format
     in field configuration;
     If not, return the original value.
     :param value: The value to be handled.
@@ -85,7 +85,7 @@ def handle_abnormal(value, field):
     :return: The value after abnormal handling.
     """
     if field.get('format', 'str') == 'str':
-        abnormal = 'unavailable'
+        abnormal = 'Unavailable'
     else:
         abnormal = 0
     if value is None:

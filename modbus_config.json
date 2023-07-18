@@ -10,7 +10,8 @@
         "name": "ts",
         "parse": "second2micro",
         "to": "time",
-        "format": "int"
+        "format": "integer",
+        "encoding": "timestamp"
       }
     ],
     "metadata": [
@@ -18,24 +19,28 @@
         "name": "id.orig_h",
         "parse": "ip_quad2int",
         "to": "srcip",
-        "format": "int"
+        "format": "integer",
+        "encoding": "bit"
       },
       {
         "name": "id.orig_p",
         "to": "srcport",
-        "format": "int"
+        "format": "integer",
+        "encoding": "word_port"
       },
       {
         "name": "id.resp_h",
         "parse": "ip_quad2int",
         "to": "dstip",
-        "format": "int",
-        "abnormal": true
+        "format": "integer",
+        "abnormal": true,
+        "encoding": "bit"
       },
       {
         "name": "id.resp_p",
         "to": "dstport",
-        "format": "int"
+        "format": "integer",
+        "encoding": "word_port"
       }
     ],
     "timeseries": [
@@ -43,7 +48,8 @@
         "name": "func",
         "parse": "modbus_func2code",
         "to": "funccode",
-        "format": "int"
+        "format": "integer",
+        "encoding": "categorical"
       }
     ]
   }
